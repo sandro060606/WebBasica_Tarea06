@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<body>
+
+  <form action="">
+    <button type="button" id="test1">Test 1</button>
+  </form>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      //Referencia
+      const b1 = document.getElementById('test1')
+      //Algoritmo, proceso , accion || Es Reutilizable
+      function mostrarSaludo(){
+        console.log("Aprendiendo JS")
+      }
+
+      b1.addEventListener("click", mostrarSaludo)//Este es la forma abreviada () => {console.log("Hola")}
+    })
+  </script>
+</body>
+</html>

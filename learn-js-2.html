@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <form action="">
+    <label for="">Carreras</label>
+    <select name="carreras" id="carreras">
+      <option value="">Seleccione</option>
+    </select>
+    <button type="button" id="cargar-datos">Cargar datos</button>
+  </form>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      //Referencias
+      const lista = document.getElementById('carreras')
+      const btnCarga = document.getElementById('cargar-datos')
+
+      //Arreglo de Objetos (objetos tienen atributos)
+      const carreras = [
+        {codigo: '1', nombre: 'Ingeneria de Software'},
+        {codigo: '2', nombre: 'Diseño Grafico'},
+        {codigo: '3', nombre: 'Administracion'},
+        {codigo: '4', nombre: 'Mecanico de mantenimiento'}
+      ];
+
+      btnCarga.addEventListener("click", () => {
+        console.log(carreras)
+        carreras.forEach(carrera => {
+          lista.innerHTML += `<option value='${carrera.codigo}'>${carrera.nombre}</option>`
+        });
+        //lista.innerHTML += "<option>Ing. Software</option>"
+        //lista.innerHTML += "<option>Diseño Grafico</option>"
+        //lista.innerHTML += "<option>Administracion Industrial</option>"
+      })
+
+    })
+  </script>
+
+</body>
+</html>
